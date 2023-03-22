@@ -1,21 +1,32 @@
 <%- include('./partials/head.ejs') %>
+<nav>
+    <% smartzones.forEach(smartzone => { %>
+        <article class="sz-card">
+            <div class="card-left-side">
+                <img src="<%- smartzone.image[0].url %>" alt="Foto van smartzone <%= smartzone.name %>">
+            </div>
+
+            <div class="card-right-side">
+                <% if (smartzone.reservation === null) { %>
+                    <% } else { %>
+                <p>Occupied</p> <!-- Icon toevoegen -->
+                <% } %>
+                <!-- Icon hartje toevoegen -->
+                <h2>SZ <%= smartzone.name %></h2>
+
+                <p><%= smartzone.address %>, <%= smartzone.town %></p>
 
 
-<% squad.members.forEach(member => { %>
+                <div class="buttons">
+                    <button>Book now</button>
+                    <button>Book later</button>
+                </div>
+            </div>
+        </article>
+    <% }) %>
+</nav>
 
-  <article>
-    <h2><%= member.name %> <%= member.prefix %> <%= member.surname %></h2>
-    <img src="<%= member.avatar != '' ? member.avatar :'/placeholder.jpg' %>" alt="De avatar van <%= member.name %>" />
-    <a href="/member/?id=<%= member.id %>"></a>
-  </article>
-
-<% }) %>
-
-
-  <article>
-    <h2>Jouw kaartje hier?</h2>
-    <img src="/placeholder.jpg" alt="Jouw avatar hier?" />
-    <a href="/member/new?squad=<%= squad.id %>&"></a>
-  </article>
-
+<aside>
+    <iframe src="https://www.google.com/maps/d/embed?mid=1gqmyNn7os6ZzXyRZrCr-Cp2dyEiJAw8&ehbc=2E312F" width="640" height="480"></iframe>
+</aside>
 <%- include('./partials/foot.ejs') %>

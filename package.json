@@ -1,37 +1,33 @@
 {
-  "name": "the-web-is-for-everyone-interactive-functionality",
+  "name": "server-side-rendering",
   "version": "0.0.1",
-  "description": "Een semi-live-coded voorbeeld van een interactieve, server side rendered website waarin alle HTTP Request types zijn geimplementeerd.",
-  "main": "server.js",
+  "description": "Het is een live-coded voorbeeld van SSR voor de Ad FDND.",
+  "main": "index.js",
   "type": "module",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ju5tu5/the-web-is-for-everyone-interactive-functionality.git"
+    "url": "git+https://github.com/ju5tu5/server-side-rendering.git"
   },
   "keywords": [
     "node",
     "express",
-    "ejs",
-    "rest",
-    "api"
+    "ejs"
   ],
   "author": "J.P. Sturkenboom <j.p.sturkenboom@hva.nl>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ju5tu5/the-web-is-for-everyone-interactive-functionality/issues"
+    "url": "https://github.com/ju5tu5/server-side-rendering/issues"
   },
-  "homepage": "https://github.com/ju5tu5/the-web-is-for-everyone-interactive-functionality#readme",
+  "homepage": "https://github.com/ju5tu5/server-side-rendering#readme",
   "dependencies": {
-    "dotenv": "^16.0.3",
-    "ejs": "^3.1.9",
-    "express": "^4.18.2",
-    "nodemon": "^2.0.21"
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
   }
 }
