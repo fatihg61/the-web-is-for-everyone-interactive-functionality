@@ -1,33 +1,33 @@
-> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
-
-# Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+# Server Side Rendering
 
 ## Inhoudsopgave
 
-  * [Beschrijving](#beschrijving)
-  * [Gebruik](#gebruik)
-  * [Kenmerken](#kenmerken)
-  * [Installatie](#installatie)
-  * [Bronnen](#bronnen)
-  * [Licentie](#licentie)
+- [Beschrijving](#beschrijving)
+- [Kenmerken](#kenmerken)
+- [Installatie](#installatie)
+- [Gebruik](#gebruik)
+- [Bronnen](#bronnen)
+- [Licentie](#licentie)
 
 ## Beschrijving
-<!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
 
-## Gebruik
-<!- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
+Met dit project met ik begonnen met een pagine bouwen voor coding the curbs dat werkt met REST API en Json
+![image](https://user-images.githubusercontent.com/112856020/225879025-1922d99c-8514-4a8d-a7fd-4fa1d251b3f3.png)
+https://wild-gold-crocodile-veil.cyclic.app/
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
+
+HTML 
+CSS
+NODEJS 
+REST API
 
 ## Installatie
-<!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
 
+## Gebruik
 
 ## Bronnen
+FDND TALKS
 
 ## Licentie
 
