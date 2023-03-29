@@ -1,130 +1,158 @@
-# Server-Side Website
+<!--
+De conventie voor naamgeving is sprintnaam-(sub)taaknaam
+Topics: semester-naam, semesternummer, sprint-naam, sprint-nummer
+-->
 
-Ontwerp en ontwikkel een server-side website voor een opdrachtgever.
+# {Naam}
 
+{Beschrijving van de leertaak}.
 
 ## Context
+*Bij welke sprint hoort deze leertaak en welk niveau heeft deze leertaak.*
 
-Deze leertaak hoort bij sprint 8 "Server-Side Rendering". Dit is een leertaak die je individueel uitvoert voor een opdrachtgever.
+Deze leertaak hoort bij {sprint # "titel van de sprint"}. Dit is een {niveau van de opdracht} die je {individueel, in team} uitvoert voor {opdrachtgever}
 
-In het college S08W1-01-Sprintplanning-server-side-rendering wordt uitgelegd wat je moet doen. Tijdens de sprintplanning met de opdrachtgever bespreek je de opdracht.
 
-Bij deze leertaak hoort de deeltaak:
-- [The Cient - Briefing/Debriefing](https://github.com/fdnd-task/the-client-briefing-debriefing/)
+## User story
+*Kies een user story uit de backlog van jou project.*
 
+{Beschrijf de opdracht aan de hand van de gekozen user story}
 
 ## Doel van deze opdracht
+*Wat leer je in deze taak.*
 
-Je leert hoe je server-side data kunt gebruiken voor het maken van een website.
-
+{beschrijf de taak in actieve taal: Je leert hoe...}
 
 ## Werkwijze
+*De werkwijze volgt de fasering van de Development Life Cycle.*
 
-Voor deze leertaak krijg je eerst een sprintplanning met de opdrachtgever. Tijdens de sprintplanning bespreek je de taken van het project board en de content in de database. Elke opdrachtgever heeft content voor de website in een database. Met een een REST API kun je deze content gebruiken voor het maken van de website.
+{geef de opdracht, in meer of mindere mate van sturing afhankelijk van het niveau van de taak}
 
-Voor deze opdracht doorloop je alle fases van de DLC [analyseren](#analyseren), [ontwerpen](#ontwerpen), [bouwen](#bouwen), [integreren](#integreren) en [testen](#testen).
-
+Deze opdracht gaat over alle fases van de DLC [analyseren](#analyseren), [ontwerpen](#ontwerpen), [bouwen](#bouwen), [integreren](#integreren) en [testen](#testen).
 
 ### Analyseren
-In de analysefase inventariseer je wat er moet gebeuren om een taak uit te voeren.
+*In de analysefase inventariseer je wat er moet gebeuren om een taak uit te voeren.*
 
-Bijvoorbeeld: grip krijgen op een taak door het voeren van een gesprek met jouw opdrachtgever, schrijven van een debriefing, inventarisatie van bestaande informatie, interface audit, interface inventory, planning, maken van een todo lijst en bepalen van definitions of done.
+<details>
+<summary>Aanpak</summary>
 
-#### User Stories
-Kies een of meerdere user stories uit de backlog van het project waar je aan gaat werken. De projecten staan bij [FDND Agency](https://github.com/fdnd-agency).
+1. {geef de stappen}
+2. {die in deze fase}
+3. {doorlopen worden}
 
-Bekijk per user story welke content in de REST API staat.
+#### Materiaal analysefase
 
-Bekijk per user story relevant studentenwerk uit semester 1.
+- [Resource](https://example.com)
+- [Resource](https://example.com)
+- [Resource](https://example.com)
 
-#### Briefing/debriefing
-Schrijf een debriefing. De debriefing is noodzakelijk voor de opdrachtgever om na te gaan of duidelijk is overgekomen wat hij voor ogen had. Maar ook voor jou om te controleren of je alles goed hebt begrepen en geconcretiseerd.
-
-#### Inrichten ontwikkelomgeving
-
-Fork deze leertaak en clone het naar je systeem. 
-
-Je gaat een server-side website bouwen met Node/Express/EJS gebaseerd op een REST API met JSON. 
-Installeer de Node ontwikkelomgeving en installeer de packages die je nodig hebt. Maak de files en folders aan die je nodig hebt op de Node server. 
-
-Test de Node server door de JSON van de REST API te fetchen en te loggen. 
-
-### Bronnen analyseerfase
-
-* [Introduction to the server side](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Introduction)
-* [Client-side vs. Server-side: what’s the difference?](https://medium.com/@donotapply/client-side-vs-server-side-whats-the-difference-a933341cd60e)
-* [Node.js Ultimate Beginner’s Guide in 7 Easy Steps](https://www.youtube.com/watch?v=ENrzD9HAZK4)
-* [Learn JSON in 10 Minutes](https://www.youtube.com/watch?v=iiADhChRriM&t=513s)
-
+</details>
 
 ### Ontwerpen
-In de ontwerpfase neem je ontwerpbeslissingen en zorg je dat je precies weet wat je moet gaan bouwen.
+*In de ontwerpfase neem je ontwerpbeslissingen en zorg je dat je precies weet wat je moet gaan bouwen.*
 
-Bijvoorbeeld: het maken van idee-schetsen, wireframes en wireflows tekenen. Content analyseren en onderzoek doen naar semantische HTML elementen die je nodig hebt, hoe je de layout in CSS zou kunnen maken en welke JS en CSS je nodig hebt voor interacties en animaties.
+<details>
+<summary>Aanpak</summary>
 
-#### Schetsen
-Schets de user story in een wireframe of wireflow. Bepaal de verschillende breakpoints die je nodig hebt.  
+1. {geef de stappen}
+2. {die in deze fase}
+3. {doorlopen worden}
 
-Maak een breakdown van de ingewikkelde componenten die je wil maken. Misschien wil je een carousel ontwerpen, of een responsive menu? 
-Welke HTML, CSS en JS heb je daarvoor nodig?
+#### Materiaal ontwerpfase
 
-Schrijf bij je schets welke elementen statisch zijn en welke elementen dynamsch. 
+- [Resource](https://example.com)
+- [Resource](https://example.com)
+- [Resource](https://example.com)
 
-Schrijf bij je schets welke onderdelen van een pagina je in _partials_ kan opdelen.
-
+</details>
 
 ### Bouwen
-In de bouwfase realiseer je de beslissingen uit de ontwerpfase.
+*In de bouwfase realiseer je de beslissingen uit de ontwerpfase.*
 
-Je bouwt de website met Node, Express en EJS op de server en je gebruikt client-side technieken HTML, CSS of JS voor het responsive ontwerp of interactieve funcionaliteiten.
+<details>
+<summary>Aanpak</summary>
 
+1. {geef de stappen}
+2. {die in deze fase}
+3. {doorlopen worden}
 
-#### Bronnen bouwfase
+#### Materiaal bouwfase
 
-<!-- * [Using EJS template engine with Express.js](https://www.topcoder.com/thrive/articles/using-ejs-template-engine-with-express-js) -->
-<!-- * [Rendering Views with Node, Express, and EJS](https://medium.com/@bloomaman/rendering-views-with-node-express-and-ejs-415af1493c74) -->
-* [Master EJS template engine with Node.js and Expressjs](https://medium.com/swlh/master-ejs-template-engine-with-node-js-and-expressjs-979cc22b69be)
-* [How to Use JSON in Node.js](http://www.jsonexample.com/how-to-use-json-in-node-js/)
+- [Resource](https://example.com)
+- [Resource](https://example.com)
+- [Resource](https://example.com)
 
-
-
+</details>
 
 ### Integreren
-In de integratiefase voer je de aanpassingen door zodat iedereen ze kan zien.
+*In de integratiefase voer je de aanpassingen door zodat iedereen ze kan zien.*
 
-Als je helemaal klaar bent en alles lokaal werkt ga je verder met het publiceren van jouw project op internet. Omdat we met Node werken is dit iets ingewikkelder dan voorheen, er moet namelijk een serveromgeving opgestart worden. Wij gebruiken cyclic.sh als hostingpartij maar je mag natuurlijk je eigen voorkeur volgen als die anders is.
+<details>
+<summary>Aanpak</summary>
 
+1. {geef de stappen}
+2. {die in deze fase}
+3. {doorlopen worden}
+
+#### Materiaal integratiefase
+
+- [Resource](https://example.com)
+- [Resource](https://example.com)
+- [Resource](https://example.com)
+
+</details>
 
 ### Testen
-In de testfase controleer je of jouw aanpassingen werken zoals bedoeld en pas je zo nodig jouw ontwerp of de code aan om te beantwoorden aan jouw bevindingen.
+*In de testfase controleer je of jouw aanpassingen werken zoals bedoeld.*
 
-Bijvoorbeeld: uitvoeren van code/design reviews, user tests met gebruikers, toegankelijkheid testen met lighthouse en handmatige tests, je bevindingen documenteren en bepalen of je nog een iteratie maakt.
+<details>
+<summary>Aanpak</summary>
 
+1. {geef de stappen}
+2. {die in deze fase}
+3. {doorlopen worden}
 
+#### Materiaal testfase
 
+- [Resource](https://example.com)
+- [Resource](https://example.com)
+- [Resource](https://example.com)
+
+</details>
 
 ## Criteria
 *Definitions of done*
 
-Focus sprint 8 - De focus van deze sprint ligt op het maken van een opdracht voor een opdrachtgever, leren hoe je op de server data kunt laden en presenteren.
+Focus sprint 1 - De focus in deze sprint ligt op kennismaken, samenwerken en hoe je interface en vormgevingsprincipes kan toepassen voor een responsive design. Hoe gaan werken we bij FDND, wat wordt er van de student verwacht, welke mindset is nodig. Succes ervaren.
 
-Doel van deze opdracht:
+Focus sprint 2 - De focus in deze sprint ligt op het maken van een opdracht voor een opdrachtgever en het presenteren van het resultaat.Kennismaken met het vakgebied, communiceren en presenteren. Hoe kom je over bij je opdrachtgever. Durfen.
 
-* Je leert hoe je server-side data kunt gebruiken voor het maken van een website.
+Focus sprint 3 - De focus in deze sprint ligt op gebruiksvriendelijkheid, toegankelijkheid, testen en de testresultaten gebruiken voor het verbeteren van een ontwerp. Je maakt iets voor een mens. Praten met een mens, doorvragen, protoypen en testen en resultaten gebruiken.
 
-Voor deze leertaak gelden de gedragscriteria:
+Focus sprint 4 - De focus in deze sprint ligt op het toepassen van een huisstijl en maken van formulieren. Living styleguide en Atomic design, Animeren, Toegankelijke formulieren.
 
-* C: Je luistert en vraagt door, neemt wat een ander zegt serieus
-* C: Je kan ontwerpkeuzes, eigen ideeën en producten begrijpelijk overbrengen aan belanghebbenden
-* P: Je combineert aangeboden principes en conventies op het gebied van frontend, interface design en vormgeving om een passende oplossing voor een opdrachtgever te realiseren
-* ~~L: Je volgt aangeboden internationale ontwikkelingen in het vakgebied~~
+Focus sprint 5 - De focus van deze sprint ligt op navigatie en informatie architectuur van een website. Organiseren en structureren van informatie, Design Patterns toepassen, Navigatie, filteren en zoekstrategieën, Micro Interacties.
+
+Focus sprint 6 - De focus van deze sprint ligt op werkwijze, samenwerken. Toepassen wat je al hebt geleerd. Er achter komen dat je een bedrijf kan helpen en advies kan geven over verschillende frontend zaken zoals navigatie, toegankelijkheid, interface design.
+
+Focus sprint 7 - De focus in deze sprint ligt op team building, samenwerken en hoe je een dynamische website kan maken waar bezoekers ook iets achter kunnen laten.	Het doel van deze sprint is binding tussen studenten creeeren. Met deze squad ga je het doen! Samen studeren, leren en elkaar helpen. En iets gezamenlijks maken met een database dingen. Een sneak peak naar de rest van het semester.
+
+Focus sprint 8 - De focus van deze sprint ligt op het maken van een opdracht voor een opdrachtgever, leren hoe je externe data kan laden en presenteren. Je hebt data, die ga je laden en tonen, zodat iemand daar iets mee kan doen.
+dat betekent veel voor de interfcace, het laden van de data kost tijd en de data kan veranderen, hoe toon je dat en hoe zorg je dat je gebruiker 'controle' ervaart.
+
+Focus sprint 9 - De focus van deze sprint ligt op gebruiksvriendelijkheid, toegankelijkheid, testen en de testresultaten gebruiken voor het verbeteren van een ontwerp. Server site rendering leren. Progressive enhancement leren. Core functionaliteit kunnen bepalen en implementeren				
+
+Focus sprint 10 - De focus van deze sprint ligt op het beter en sneller laten werken van een applicatie, ook als er geen verbinding is met het internet.
+
+Focus sprint 11 - De focus van deze sprint ligt op het maken van multi-user omgeving door het opzetten van een real-time verbinding tussen client en server. 
+
+Focus sprint 12 - De focus van deze sprint ligt op werkwijze en hoe je een opdrachtgever kan helpen met het uitwerken van een concept. 
+
+
+### Deze leertaak hoort bij het gedragscriterium:
+
+{benoem de betreffende gedrasgcriteria}
 
 Deze opdracht is done als:
 
-- [ ] Je hebt een website ontworpen en gemaakt met Node, Express en EJS en een REST API
-- [ ] Je website is online gepubliceerd
-- [ ] Je hebt je proces bijgehouden in de Wiki
-- [ ] Je toont aan dat je in de analysefase verschillende methoden en technieken hebt ingezet om te inventariseren wat er moet gebeuren
-- [ ] Je toont aan dat je in de ontwerpfase verschillende methoden en technieken hebt ingezet die ervoor zorgen dat je precies weet wat je moet bouwen
-- [ ] Je toont aan dat je in de bouwfase verschillende server-side en client-side methoden en technieken hebt ingezet om het ontwerp te realiseren
-
+[ ] - {beschrijf de definitions of done}
