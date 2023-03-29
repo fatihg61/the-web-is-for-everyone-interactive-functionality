@@ -26,6 +26,13 @@ app.get('/', (request, response) => {
 app.post('/', (request, response) => {
   const { body } = request
   console.log(body);
+
+  const startTime = `${body.dateStart}T${body.timeStart}:00+00:00`
+  const endTime = `${body.dateEnd}T${body.timeEnd}:00+00:00`
+
+  body.timeStart = startTime
+  body.timeEnd = endTime
+
   postJson(url + '/reservations', body)
     .then((res) => {
       console.log(res.errors.length);
