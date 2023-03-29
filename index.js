@@ -10,6 +10,8 @@ const app = express()
 app.set('view engine', 'ejs')
 app.set('views', './views')
 app.use(express.static('public'))
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 // Maak een route voor de index
 app.get('/', (request, response) => {
@@ -21,6 +23,24 @@ app.get('/', (request, response) => {
   })
 })
 
+app.post('/', (request, response) => {
+  const { body } = request
+  console.log(body);
+  postJson(url + '/reservations', body)
+    .then((res) => {
+      console.log(res.errors.length);
+
+      if (res.errors) {
+        console.log(res.errors[0].message);
+
+      } else {
+        console.log('Gelukt');
+
+      }
+    })
+
+})
+
 app.get('/smartzones', (request, response) => {
   let slug = request.query.smartzonesname || 'Sarah'
   let smartzonesUrl = url + '/smartzones/' + name
@@ -29,6 +49,16 @@ app.get('/smartzones', (request, response) => {
     response.render('smartzones', data)
   })
 })
+
+export async function postJson(url, body) {
+  return await fetch(url, {
+    method: 'post',
+    body: JSON.stringify(body),
+    headers: { 'Content-Type': 'application/json' },
+  })
+    .then((response) => response.json())
+    .catch((error) => error)
+}
 
 app.get('/over', (request, response) => {
   response.render('over')

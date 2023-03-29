@@ -64,6 +64,46 @@
     </ul>
     
 </section>
+
+<form action="/" method="post">
+    <fieldset>
+        <label for="smartzones">Select the smartzone</label>
+        <select required="" id="smartzones" name="smartzoneId">
+            
+                <option value="clene4gw60aqg0bunwwpawr1p">Tijn</option>
+            
+                <option value="cleosl8mj3up30bw35w4tka59">Ahmed</option>
+            
+                <option value="cleosfgnk3yn80aus4i69hm15">Manon</option>
+            
+                <option value="cleosbvwq3t350bunud5mc2g0">Sarah</option>
+            
+                <option value="clepg22u74dlo0aus87j3rscd">Wicher</option>
+            
+        </select>
+
+        <label for="author">Name</label>
+        <input required="" id="author" name="author">
+
+        <label for="dateStart">Begin date</label>
+        <input required="" id="dateStart" type="date" name="dateStart" min="">
+
+        <label for="dateEnd">End date</label>
+        <input id="dateEnd" type="date" name="dateEnd">
+
+        <label for="timeStart">Begin time</label>
+        <input required="" type="time" id="timeStart" name="timeStart">
+
+        <label for="timeEnd">End time</label>
+        <input required="" type="time" id="timeEnd" name="timeEnd">
+
+        <input type="submit" value="submit">
+        
+        
+    
+    </fieldset>
+</form>
+
 <%- include("./nav.ejs") %>            
 
 <%- include("./partials/foot.ejs") %>

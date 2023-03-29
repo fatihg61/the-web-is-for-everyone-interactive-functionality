@@ -138,3 +138,18 @@ nav a {
 .detail {
     display: none;
 }
+
+form {
+    width: 50vw;
+    margin: auto;
+    margin-top: 5vh;
+    background-color: var(--b-white);
+}
+
+fieldset {
+    padding: 1rem;
+}
+
+form input, form label {
+    display: block;
+}
