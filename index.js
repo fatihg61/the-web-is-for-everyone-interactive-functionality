@@ -1,79 +1,87 @@
-import { name } from 'ejs'
-import express from 'express'
-
-const url = 'https://api.codingthecurbs.fdnd.nl/api/v1'
+import * as dotenv from 'dotenv'
+import express, { request, response } from 'express'
 
 // Maak een nieuwe express app
 const app = express()
 
+dotenv.config()
+
 // Stel in hoe we express gebruiken
 app.set('view engine', 'ejs')
 app.set('views', './views')
-app.use(express.static('public'))
+app.use(express.static('public'));
+
+// Stel afhandeling van formulieren in
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-// Maak een route voor de index
+// Maak de routes aan
 app.get('/', (request, response) => {
-  let smartzonesUrl = url + '/smartzones'
-
-  fetchJson(smartzonesUrl).then((data) => {
-    console.log(data)
-    response.render('index', { smartzones: data.smartzones })
+    let urlSmartzones = `${process.env.API_URL}/smartzones`
+  fetchJson(urlSmartzones).then((smartzones) => {
+    let id = request.query.id || 'clene4gw60aqg0bunwwpawr1p'
+    let url = `${process.env.API_URL}/reservations?id=${id}`
+    fetchJson(url).then((reservations) => {
+      let data = {smartzones: smartzones, reservations: reservations} 
+      response.render('index', data)
+    })
   })
 })
 
-app.post('/', (request, response) => {
-  const { body } = request
-  console.log(body);
 
-  const startTime = `${body.dateStart}T${body.timeStart}:00+00:00`
-  const endTime = `${body.dateEnd}T${body.timeEnd}:00+00:00`
+app.get('/book', (request, response) => {
+  let urlSmartzones = `${process.env.API_URL}/smartzones`
+  fetchJson(urlSmartzones).then((smartzones) => {
+    let id = request.query.id || 'clene4gw60aqg0bunwwpawr1p'
+    let url = `${process.env.API_URL}/reservations?id=${id}`
+    fetchJson(url).then((reservations) => {
+      let data = {smartzones: smartzones, reservations: reservations}
+      response.render('book', data)
+    })
+  })
+})
 
-  body.timeStart = startTime
-  body.timeEnd = endTime
+  app.post('/', (request, response) => {
+    request.body.timeStart = request.body.dateStart + 'T' + request.body.timeStart + ':00Z';
+    request.body.timeEnd = request.body.dateEnd + 'T' + request.body.timeEnd + ':00Z';    
+    let url = `${process.env.API_URL}/reservations`
+    postJson(url, request.body).then((data) => {
+      let newReservation = { ... request.body}
+      console.log(JSON.stringify(data))
+     if (data.success) {
+          response.redirect('/?reservationPosted')
+      }
+      else {
+      const errorMessage = data.message
+      const newData = { error: errorMessage, values: newReservation }
 
-  postJson(url + '/reservations', body)
-    .then((res) => {
-      console.log(res.errors.length);
-
-      if (res.errors) {
-        console.log(res.errors[0].message);
-
-      } else {
-        console.log('Gelukt');
-
+        let urlSmartzones = `${process.env.API_URL}/smartzones`
+        fetchJson(urlSmartzones).then((smartzones) => {
+          let id = request.query.id || 'clene4gw60aqg0bunwwpawr1p'
+          let url = `${process.env.API_URL}/reservations?id=${id}`
+          fetchJson(url).then((reservations) => {
+            let data = {smartzones: smartzones, reservations: reservations}
+            response.render('book', data)
+          })
+        })
       }
     })
-
-})
-
-app.get('/smartzones', (request, response) => {
-  let slug = request.query.smartzonesname || 'Sarah'
-  let smartzonesUrl = url + '/smartzones/' + name
-  fetchJson(smartzonestUrl).then((data) => {
-    // console.log(data)
-    response.render('smartzones', data)
   })
+
+app.get('/summary', (request, response) => {
+  response.render('summary')
 })
 
-export async function postJson(url, body) {
-  return await fetch(url, {
-    method: 'post',
-    body: JSON.stringify(body),
-    headers: { 'Content-Type': 'application/json' },
-  })
-    .then((response) => response.json())
-    .catch((error) => error)
-}
-
-app.get('/over', (request, response) => {
-  response.render('over')
+app.get('/nav', (request, response) => {
+  response.render('nav')
 })
 
-app.get('/contact', (request, response) => {
-  response.render('contact')
+app.get('/map', (request, response) => {
+
+  response.render('map')
 })
+
+
 
 // Stel het poortnummer in en start express
 app.set('port', process.env.PORT || 8000)
@@ -88,6 +96,24 @@ app.listen(app.get('port'), function () {
  */
 async function fetchJson(url) {
   return await fetch(url)
+    .then((response) => response.json())
+    .catch((error) => error)
+}
+
+/**
+ * postJson() is a wrapper for the experimental node fetch api. It fetches the url
+ * passed as a parameter using the POST method and the value from the body paramater
+ * as a payload. It returns the response body parsed through json.
+ * @param {*} url the api endpoint to address
+ * @param {*} body the payload to send along
+ * @returns the json response from the api endpoint
+ */
+export async function postJson(url, body) {
+  return await fetch(url, {
+    method: 'post',
+    body: JSON.stringify(body),
+    headers: { 'Content-Type': 'application/json' },
+  })
     .then((response) => response.json())
     .catch((error) => error)
 }

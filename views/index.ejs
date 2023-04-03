@@ -1,12 +1,12 @@
 <%- include("./partials/head.ejs") %>
 <header>
-    <img src="" alt="Logo">
+    <img src="https://static.wixstatic.com/media/688653_888facb7769e4efaa91699e914b3c335~mv2.png/v1/fill/w_189,h_70,al_c,q_95,enc_auto/CTC%20-%20Logo%20Extended%20Dark.png" alt="Logo">
 </header>
 <section class="column">
     
     <h2>smartzones</h2>
     <ul class="smartzones">
-        <% smartzones.forEach(smartzone=> { %>
+        <% smartzones.smartzones.forEach(smartzone=> { %>
             <li>
                 <div class="container-img">
                    <img src="<%= smartzone.image[0].url %>" alt="">
