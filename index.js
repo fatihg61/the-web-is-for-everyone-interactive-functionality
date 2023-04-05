@@ -50,6 +50,7 @@ app.get('/book', (request, response) => {
       console.log(JSON.stringify(data))
      if (data.success) {
           response.redirect('/?reservationPosted')
+          console.log("yep")
       }
       else {
       const errorMessage = data.message

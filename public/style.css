@@ -101,9 +101,9 @@ header img {
 
 .column li .book-now {
     color: var(--white);
-    background: var(--reserved-bg);
     border: solid 2px var(--white);
     background-color: var(--purple);
+    background: linear-gradient(to right, rgba(79,81,201,1) 0%, rgba(79,81,201,1) 40%, rgba(79,81,201,1) 44%, rgba(133,34,199,1) 100%);
 }
 
 nav {
@@ -148,6 +148,9 @@ form {
 
 fieldset {
     padding: 1rem;
+    position: absolute;
+    top: 151px;
+    width: inherit;
 }
 
 form input, form label {
