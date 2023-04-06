@@ -12,7 +12,7 @@
 ## Beschrijving
 
 Met dit project met ik begonnen met een pagine bouwen voor coding the curbs dat werkt met REST API en Json
-![image](https://user-images.githubusercontent.com/112856020/225879025-1922d99c-8514-4a8d-a7fd-4fa1d251b3f3.png)
+![image](https://user-images.githubusercontent.com/112856020/230242122-6174caf4-a5ec-4782-a370-c84f0d185845.png)
 https://weak-plum-swordfish-kit.cyclic.app/
 
 ## Kenmerken
