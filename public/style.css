@@ -143,19 +143,54 @@ form {
     width: 100%;
     margin: auto;
     margin-top: 5vh;
-    bottom: 0;
-    left: 0;
-    right: 0;
     padding: 1rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 fieldset {
     width: 100%;
     padding: 1rem;
+    border: none;
 }
 
-form input, form label {
+form input,
+form label {
     display: block;
+    margin-bottom: 1rem;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+    font-size: 1rem;
+}
+
+form input[type="submit"] {
+    background-color: var(--purple);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+    background-color: #402b8a;
 }
 
 /* Media queries for smaller screens */
